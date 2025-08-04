@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Quiz App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Medical Exam Quiz</h1>
+
+    <div id="form-container">
+      <input type="text" id="topic" placeholder="Enter topic (e.g., anatomy)" />
+      <select id="difficulty">
+        <option value="">Select difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+      <div id="question-box">
+        <h2 id="question-text"></h2>
+        <ul id="options-list"></ul>
+        <button id="submitBtn" class="hidden">Submit</button>
+        <p id="result" class="hidden"></p>
+        <button id="nextBtn" class="hidden">Next Question</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
